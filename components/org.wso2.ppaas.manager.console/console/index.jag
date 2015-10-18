@@ -24,8 +24,13 @@ var error = [];
 var caramel = require('caramel'),
         context = caramel.configs().context,
         menuJson = require('/controllers/menu/menu.json'),
-        userPermissions = session.get('PERMISSIONS');
+        userPermissions = session.get('PERMISSIONS'),
+        dasStatsPublisherEnabled = session.get('DAS_STATS_PUBLISHER_ENABLED');
 
+var monitoringDashboardUrl = '';
+if (dasStatsPublisherEnabled) {
+    monitoringDashboardUrl = session.get('MONITORING_DASHBOARD_URL');
+}
 //create left menu
 var leftMenu = menuGenerator(context, menuJson.menu, userPermissions);
 //create metro block
@@ -34,7 +39,9 @@ var metroMenu = metroGenerator('/', menuJson.menu, userPermissions);
 caramel.render({
     metro_menu: metroMenu,
     left_menu: leftMenu,
-    error: error
+    error: error,
+    dasStatsPublisherEnabled: dasStatsPublisherEnabled,
+    monitoringDashboardUrl: monitoringDashboardUrl
 });
 
 %>

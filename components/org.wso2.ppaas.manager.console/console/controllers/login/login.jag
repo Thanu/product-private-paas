@@ -43,6 +43,7 @@ var httpPort = 9763 + parseInt(offset, 10),
         httpsPort = 9443 + parseInt(offset, 10);
 
 var meteringDashboardUrl = process.getProperty("das.metering.dashboard.url");
+var monitoringDashboardUrl = process.getProperty("das.monitoring.dashboard.url");
 
 process.setProperty('server.host', hostName);
 process.setProperty('http.port', httpPort.toString());
@@ -73,6 +74,7 @@ try {
         session.put("DAS_STATS_PUBLISHER_ENABLED", dasStatsPublisherEnabled);
         if (dasStatsPublisherEnabled) {
             session.put("METERING_DASHBOARD_URL", meteringDashboardUrl);
+            session.put("MONITORING_DASHBOARD_URL", monitoringDashboardUrl);
         }
 
         try {

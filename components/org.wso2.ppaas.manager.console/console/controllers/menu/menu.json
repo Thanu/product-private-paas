@@ -202,7 +202,7 @@
             "description": "Manage applications."
         },
         {
-            "link": "https://localhost:9444/portal/dashboards/ppaas-monitoring-dashboard",
+            "link": "",
             "linkexternal": true,
             "context": "/",
             "title": "Monitoring",
