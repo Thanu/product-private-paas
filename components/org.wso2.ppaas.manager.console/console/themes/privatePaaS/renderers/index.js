@@ -15,82 +15,80 @@
  */
 var render = function (theme, data, meta, require) {
 
-    if(data.error.length == 0 ){
+    if (data.error.length == 0) {
         theme('index', {
             page_meta: [
                 {
-                    partial:'index_title',
-                    context:{
-                        page_title:'WSO2 Private PaaS Home',
-                        page_description:'WSO2 Private PaaS Home'
+                    partial: 'index_title',
+                    context: {
+                        page_title: 'WSO2 Private PaaS Home',
+                        page_description: 'WSO2 Private PaaS Home'
                     }
                 }
             ],
-            header:[
+            header: [
                 {
                     partial: 'index_header',
-                    context:{
+                    context: {}
+                }
+            ],
+            left_menu: [
+                {
+                    partial: 'index_left_menu',
+                    context: {
+                        left_menu: data.left_menu
                     }
                 }
             ],
-            left_menu:[
+            right_menu_help: [
                 {
-                    partial:'index_left_menu',
-                    context:{
-                        left_menu:data.left_menu
-                    }
-                }
-            ],
-            right_menu_help:[
-                {
-                    partial:'index_right_menu_help',
-                    context:{
-                    }
+                    partial: 'index_right_menu_help',
+                    context: {}
                 }
             ],
             content: [
 
                 {
                     partial: 'metro_menu',
-                    context:{
-                        content_menu:'links',
-                        content_title:'Welcome to WSO2 Private PaaS',
-                        content_body:{sections: data.metro_menu}
-
+                    context: {
+                        content_menu: 'links',
+                        content_title: 'Welcome to WSO2 Private PaaS',
+                        content_body: {
+                            sections: data.metro_menu,
+                            dasStatsPublisherEnabled: data.dasStatsPublisherEnabled,
+                            monitoringDashboardUrl: data.monitoringDashboardUrl
+                        }
                     }
                 }
             ]
         });
 
-    }else{
+    } else {
 
         theme('index', {
             page_meta: [
                 {
-                    partial:'index_title',
-                    context:{
-                        page_title:'WSO2 Private PaaS Home - Error',
-                        page_description:'WSO2 Private PaaS Home - Error'
+                    partial: 'index_title',
+                    context: {
+                        page_title: 'WSO2 Private PaaS Home - Error',
+                        page_description: 'WSO2 Private PaaS Home - Error'
                     }
                 }
             ],
-            header:[
+            header: [
                 {
                     partial: 'index_header',
-                    context:{
-                    }
+                    context: {}
                 }
             ],
             content: [
 
                 {
                     partial: 'error_page',
-                    context:{
-                        error:data.error,
-                        content_title:'Sorry Something went Wrong...! ',
-                        content_body:{
-
-                        }
+                    context: {
+                        error: data.error,
+                        content_title: 'Sorry Something went Wrong...! ',
+                        content_body: {}
 
                     }
                 }
