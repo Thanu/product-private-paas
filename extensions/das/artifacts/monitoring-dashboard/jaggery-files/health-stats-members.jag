@@ -75,8 +75,8 @@
 
     try {
         var clusterId = request.getParameter('clusterId');
-        var result = db.query("SELECT DISTINCT MemberId FROM MEMBER_AVERAGE_MEMORY_CONSUMPTION_STATS WHERE ClusterId=?", clusterId);
-
+        var result = db.query("SELECT DISTINCT MemberId FROM MEMBER_LIST WHERE ClusterId=? AND MemberStatus='ACTIVE' " +
+                "AND MemberId NOT IN (SELECT MemberId FROM MEMBER_LIST WHERE MemberStatus='Terminated')", clusterId);
         if (result != null) {
             print(result);
         }

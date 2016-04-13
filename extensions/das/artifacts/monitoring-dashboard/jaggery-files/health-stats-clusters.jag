@@ -75,7 +75,7 @@
 
     try {
         var clusterInstanceId = request.getParameter('clusterInstanceId');
-        var result = db.query("SELECT DISTINCT ClusterId FROM AVERAGE_MEMORY_CONSUMPTION_STATS");
+        var result = db.query("SELECT DISTINCT ClusterId FROM MEMBER_LIST");
 
         if (result != null) {
             print(result);

@@ -28,7 +28,7 @@
             "id": "np79atkpuq8h0k9",
             "content": {
               "id": "Health_Stats_Filter",
-              "title": "Health Stats Filter",
+              "title": "",
               "type": "gadget",
               "thumbnail": "store://gadget/Health_Stats_Filter/index.png",
               "data": {
@@ -87,23 +87,10 @@
                 "borders": true,
                 "titlePosition": "left"
               },
-              "options": {
-                "dataSource": {
-                  "type": "STRING",
-                  "title": "Data Source",
-                  "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "5",
-                  "options": [],
-                  "required": false
-                }
-              },
-              "settings": {}
+              "settings": {},
+              "locale_titles": {
+                "en-US": "Memory Usage"
+              }
             }
           }
         ],
@@ -136,28 +123,15 @@
                 }
               },
               "styles": {
-                "title": "Load Average",
                 "height": "400",
                 "borders": true,
-                "titlePosition": "left"
+                "titlePosition": "left",
+                "title": "Load Average"
               },
-              "options": {
-                "dataSource": {
-                  "type": "STRING",
-                  "title": "Data Source",
-                  "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "5",
-                  "options": [],
-                  "required": false
-                }
-              },
-              "settings": {}
+              "settings": {},
+              "locale_titles": {
+                "en-US": "Load Average"
+              }
             }
           },
           {
@@ -188,28 +162,15 @@
                 }
               },
               "styles": {
-                "title": "In-Flight Request",
                 "height": "400",
                 "borders": true,
-                "titlePosition": "left"
+                "titlePosition": "left",
+                "title": "In-Flight Request"
               },
-              "options": {
-                "dataSource": {
-                  "type": "STRING",
-                  "title": "Data Source",
-                  "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "5",
-                  "options": [],
-                  "required": false
-                }
-              },
-              "settings": {}
+              "settings": {},
+              "locale_titles": {
+                "en-US": "In-Flight Request"
+              }
             }
           }
         ],
@@ -242,28 +203,15 @@
                 }
               },
               "styles": {
-                "title": "Cluster Instances",
                 "height": "600",
                 "borders": true,
-                "titlePosition": "left"
+                "titlePosition": "left",
+                "title": "Cluster Instances"
               },
-              "options": {
-                "dataSource": {
-                  "type": "STRING",
-                  "title": "Data Source",
-                  "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "5",
-                  "options": [],
-                  "required": false
-                }
-              },
-              "settings": {}
+              "settings": {},
+              "locale_titles": {
+                "en-US": "Cluster Instances"
+              }
             }
           }
         ]

@@ -3,7 +3,9 @@
   "title": "Private PaaS Metering Dashboard",
   "description": "This dashboard is to show metering data.",
   "permissions": {
-    "viewers": [],
+    "viewers": [
+      "Internal/everyone"
+    ],
     "editors": [
       "Internal/everyone"
     ]
@@ -26,7 +28,7 @@
             "id": "ehng97cyk3kxogvi",
             "content": {
               "id": "Member_Status_Filter",
-              "title": "Member Status Filter",
+              "title": "",
               "type": "gadget",
               "thumbnail": "store://gadget/Member_Status_Filter/index.png",
               "data": {
@@ -94,13 +96,6 @@
                   "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
                   "options": [],
                   "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "No",
-                  "options": [],
-                  "required": false
                 }
               },
               "settings": {}
@@ -141,22 +136,6 @@
                 "borders": true,
                 "titlePosition": "left"
               },
-              "options": {
-                "dataSource": {
-                  "type": "STRING",
-                  "title": "Data Source",
-                  "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "No",
-                  "options": [],
-                  "required": false
-                }
-              },
               "settings": {}
             }
           }
@@ -180,7 +159,7 @@
             "id": "8zgl65uoackgldi",
             "content": {
               "id": "Member_Details_Filter",
-              "title": "Member Details Filter",
+              "title": "",
               "type": "gadget",
               "thumbnail": "store://gadget/Member_Details_Filter/index.png",
               "data": {
@@ -245,13 +224,6 @@
                   "type": "STRING",
                   "title": "Data Source",
                   "value": "/portal/gadgets/bar-chart/datasource/dataFile4.jag",
-                  "options": [],
-                  "required": false
-                },
-                "updateGraph": {
-                  "type": "STRING",
-                  "title": "Update Interval (s)",
-                  "value": "No",
                   "options": [],
                   "required": false
                 }

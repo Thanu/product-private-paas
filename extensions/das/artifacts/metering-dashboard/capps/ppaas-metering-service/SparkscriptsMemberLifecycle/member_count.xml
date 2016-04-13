@@ -45,6 +45,12 @@
 
         INSERT OVERWRITE TABLE member_status_new select timestamp, application_id, cluster_alias, member_id,
         member_status from memberstatus;
+
+        create temporary table member_list
+        using CarbonJDBC options (dataSource "WSO2_ANALYTICS_EVENT_STORE_DB", tableName "MEMBER_LIST");
+
+        INSERT OVERWRITE TABLE member_list select cluster_id, member_id,
+        member_status from memberstatus;
     </Script>
     <CronExpression>0/10 * * * * ?</CronExpression>
 </Analytics>
