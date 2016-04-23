@@ -15,7 +15,7 @@
  */
 var type, columns, maxUpdateValue;
 
-var REFRESH_INTERVAL = 5000;
+var REFRESH_INTERVAL = 30000;
 var dataLoaded = true;
 var timeInterval = '30 Min';
 var applicationId = '';
